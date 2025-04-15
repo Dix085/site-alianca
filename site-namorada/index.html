@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aliança - Para Minha Namorada</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+    const emojis = ['💖', '🌸', '💐', '🌺', '💕', '🌷'];
+    
+    function criarEmoji() {
+      const emoji = document.createElement('div');
+      emoji.className = Math.random() > 0.5 ? 'heart' : 'flower';
+      emoji.style.left = Math.random() * 100 + 'vw';
+      emoji.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      emoji.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      document.body.appendChild(emoji);
+  
+      setTimeout(() => {
+        emoji.remove();
+      }, 10000);
+    }
+  
+    setInterval(criarEmoji, 500);
+  </script>
+  
+  
+<body>
+  <div class="container">
+    <h1>Eu te amo minha princesa💍❤️</h1>
+    
+<p class="dedicatoria">
+  Desde que você entrou na minha vida, tudo passou a ter mais cor, mais sentido, mais amor. <br>
+  Eu escolho você todos os dias, e se depender de mim, esse amor vai ser eterno. <br>
+ </p>
+
+    <p class="sub">"Aliança" - Tribalistas</p>
+
+    <div class="lyrics">
+      <p>
+        
+      </p>
+    </div>
+
+    <audio id="musica" src="alianca.mp3" loop></audio>
+
+  <button id="playPauseBtn">⏸ Pausar música</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
